@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP8266 控制面板</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <h1>ESP8266 控制面板</h1>
+
+    <!-- 状态和数据展示 -->
+    <div id="status">状态：未连接</div>
+    <div id="data">传感器数据：---</div>
+
+    <!-- 控制按钮 -->
+    <div class="controls">
+        <button onclick="connectESP()">连接 ESP8266</button>
+        <button onclick="sendCommand('31')">切换温度报警</button>
+        <button onclick="sendCommand('32')">切换湿度报警</button>
+        <button onclick="sendCommand('33')">切换烟雾报警</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
